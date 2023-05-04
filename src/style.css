@@ -9,7 +9,7 @@ body {
 .todo-list {
   list-style-type: none;
   background-color: #fff;
-  width: 80%;
+  width: 90%;
   margin: auto;
   padding: 0;
   font-family: 'Arial', Courier, monospace;
@@ -31,4 +31,18 @@ body {
   background-color: rgb(236, 232, 232);
   border: 1px solid grey;
   color: grey;
+}
+
+.menu,
+.refresh {
+  height: 20px;
+  position: absolute;
+  right: 100px;
+}
+
+.enter {
+  height: 20px;
+  position: absolute;
+  right: 100px;
+  rotate: 90deg;
 }

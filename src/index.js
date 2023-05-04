@@ -1,4 +1,7 @@
 import './style.css';
+import menu from './assets/images/menu.svg';
+import refresh from './assets/images/refresh.svg';
+import enter from './assets/images/enter-add.svg';
 
 const todoList = [
   {
@@ -36,6 +39,20 @@ const todoList = [
 ];
 
 const todoUL = document.querySelector('.todo-list');
+const todoTitle = document.querySelector('.todo-title');
+const addToList = document.querySelector('.add-task');
+
+const enterIcon = document.createElement('img');
+const refreshIcon = document.createElement('img');
+
+refreshIcon.src = refresh;
+enterIcon.src = enter;
+
+refreshIcon.className = 'refresh';
+enterIcon.className = 'enter';
+
+todoTitle.appendChild(refreshIcon);
+addToList.appendChild(enterIcon);
 
 todoList.forEach((item, id) => {
   let minIndex = id;
@@ -52,7 +69,10 @@ todoList.forEach((item, id) => {
 
   const task = document.createElement('li');
   task.insertAdjacentHTML('beforeend', `<input type="checkbox" class="check-box"> ${todoList[id].description}`);
-
+  const taskMenu = document.createElement('img');
+  taskMenu.src = menu;
+  taskMenu.className = 'menu';
+  task.appendChild(taskMenu);
   // by appending it to the list
   todoUL.appendChild(task);
 });
