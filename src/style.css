@@ -1,0 +1,48 @@
+body {
+  background-color: rgb(236, 233, 230);
+}
+
+.hello {
+  color: red;
+}
+
+.todo-list {
+  list-style-type: none;
+  background-color: #fff;
+  width: 90%;
+  margin: auto;
+  padding: 0;
+  font-family: 'Arial', Courier, monospace;
+  margin-top: 2rem;
+}
+
+.todo-list li {
+  border-bottom: 1px solid grey;
+  padding: 1rem;
+}
+
+#add-to-list {
+  border: none;
+  font-style: italic;
+}
+
+.clear-all {
+  text-align: center;
+  background-color: rgb(236, 232, 232);
+  border: 1px solid grey;
+  color: grey;
+}
+
+.menu,
+.refresh {
+  height: 20px;
+  position: absolute;
+  right: 100px;
+}
+
+.enter {
+  height: 20px;
+  position: absolute;
+  right: 100px;
+  rotate: 90deg;
+}
