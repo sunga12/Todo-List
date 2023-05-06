@@ -43,7 +43,7 @@ TO-DO List is a basic website that allows users to add/remove books from a list
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Coming Soon]()
+- [Coming Soon]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
