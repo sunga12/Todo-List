@@ -4,7 +4,7 @@
   "description": "<a name=\"readme-top\"></a>",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist",
     "start": "webpack serve --open",
     "build": "webpack"
   },
@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/sunga12/Todo-List/issues"
   },
-  "homepage": "https://github.com/sunga12/Todo-List#readme",
+  "homepage": "https://sunga12.github.io/todo-lists",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.3",
@@ -37,6 +37,8 @@
     "webpack-dev-server": "^4.13.3"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "gh": "^2.8.9",
+    "lodash": "^4.17.21",
+    "pages": "^0.0.16"
   }
 }
