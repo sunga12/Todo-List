@@ -1,6 +1,5 @@
-import Task from './task';
+import Task from './task.js';
 import menu from './assets/images/menu.svg';
-import { constant } from 'lodash';
 
 export default class Tasks {
   constructor(tasks = []) {
@@ -8,7 +7,6 @@ export default class Tasks {
   }
 
   addTask(description, completed) {
-  
     const index = this.tasks.length + 1;
 
     // creat a new Task
@@ -20,13 +18,12 @@ export default class Tasks {
     // add it to the end of the array
     this.tasks.push(newTask);
 
-    // reset the list to empty 
+    // reset the list to empty
     todoList.innerHTML = '';
 
     // reload the list to display updated
     this.loadTasks();
   }
-
 
   removeTask(indexToRemove) {
     // remove the 1 task with given index
@@ -39,16 +36,16 @@ export default class Tasks {
 
     this.tasks.forEach((task) => {
       task.index = counter;
-      counter = counter+1;
-    })
+      counter += 1;
+    });
 
     const todoList = document.querySelector('.todo-list');
 
-    // reset the list to empty 
+    // reset the list to empty
     todoList.innerHTML = '';
 
     // reload the list to display updated
-    this.loadTasks();  
+    this.loadTasks();
   }
 
   loadTasks() {
@@ -72,30 +69,28 @@ export default class Tasks {
 
       deleteIcon.src = menu;
       deleteIcon.setAttribute('id', `delete${task.index}`);
-      
+
       taskDiv.appendChild(check);
       taskDiv.appendChild(taskDesc);
       taskDiv.appendChild(deleteIcon);
       taskLi.appendChild(taskDiv);
       todoList.appendChild(taskLi);
-    })
+    });
   }
 
-  editTask(description, index){
+  editTask(description, index) {
     this.tasks[index].description = description.value;
   }
 
-  saveTasks(){
+  saveTasks() {
     localStorage.setItem('tasks', JSON.stringify(this.tasks));
   }
 
-  retrieveTasks(){
+  retrieveTasks() {
     const savedTasks = localStorage.getItem('tasks');
-    if(savedTasks){
+    if (savedTasks) {
       this.tasks = JSON.parse(savedTasks);
       this.loadTasks();
     }
   }
 }
-
-
