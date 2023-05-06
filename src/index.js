@@ -40,10 +40,9 @@ document.addEventListener('click', (event) => {
     });
   });
 
-  if(event.target.matches('.clear-all') ) {
+  if (event.target.matches('.clear-all')) {
     todoList.clearCompleted();
   }
-
 });
 
 document.addEventListener('change', (event) => {
@@ -58,12 +57,11 @@ document.addEventListener('change', (event) => {
     });
   }
 
-  if(event.target.matches('.check-box')) {
+  if (event.target.matches('.check-box')) {
     checkBoxes.forEach((status, index) => {
-      if(event.target === status){
-      todoList.changeStatus(index, status.checked);
+      if (event.target === status) {
+        todoList.changeStatus(index, status.checked);
       }
-    })
-
+    });
   }
 });

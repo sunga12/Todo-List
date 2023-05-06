@@ -24,7 +24,6 @@ export default class Tasks {
     // reload the list to display updated
     this.loadTasks();
     this.saveTasks();
-
   }
 
   removeTask(indexToRemove) {
@@ -66,7 +65,6 @@ export default class Tasks {
       deleteIcon.className = 'menu';
       check.className = 'check-box';
 
-
       check.setAttribute('type', 'checkbox');
       check.checked = task.completed;
 
@@ -86,7 +84,6 @@ export default class Tasks {
   editTask(description, index) {
     this.tasks[index].description = description.value;
     this.saveTasks();
-
   }
 
   saveTasks() {
@@ -100,15 +97,13 @@ export default class Tasks {
       this.loadTasks();
     }
   }
-  
 
   changeStatus(index, value) {
     this.tasks[index].completed = value;
     this.saveTasks();
   }
 
-  clearCompleted(completedOnly = true) {
-   
+  clearCompleted() {
     // query selector checkboxes
     const todoList = document.querySelector('.todo-list');
 
@@ -119,6 +114,5 @@ export default class Tasks {
     todoList.innerHTML = '';
     this.loadTasks();
     this.saveTasks();
-
   }
 }
