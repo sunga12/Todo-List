@@ -29,23 +29,26 @@ document.addEventListener('click', (event) => {
     todoList.addTask(typeTask.value, false);
   }
   typeTask.value = '';
-
-  todoList.saveTasks();
 });
 
-document.addEventListener('click', () => {
+document.addEventListener('click', (event) => {
   const deleteIcons = document.querySelectorAll('.menu');
 
   deleteIcons.forEach((icon, index) => {
     icon.addEventListener('click', () => {
       todoList.removeTask(index);
-      todoList.saveTasks();
     });
   });
+
+  if(event.target.matches('.clear-all') ) {
+    todoList.clearCompleted();
+  }
+
 });
 
 document.addEventListener('change', (event) => {
   const taskDescriptions = document.querySelectorAll('.task-desc');
+  const checkBoxes = document.querySelectorAll('.check-box');
 
   if (event.target.matches('.task-desc')) {
     taskDescriptions.forEach((description, index) => {
@@ -53,5 +56,14 @@ document.addEventListener('change', (event) => {
         todoList.editTask(description, index);
       }
     });
+  }
+
+  if(event.target.matches('.check-box')) {
+    checkBoxes.forEach((status, index) => {
+      if(event.target === status){
+      todoList.changeStatus(index, status.checked);
+      }
+    })
+
   }
 });
