@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/sunga12/Todo-List/issues"
   },
-  "homepage": "https://sunga12.github.io/todo-list",
+  "homepage": "https://sunga12.github.io/todo-list/dist/",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.3",
