@@ -33,7 +33,7 @@ TO-DO List is a basic website that allows users to add/remove books from a list
 ### Key Features <a name="key-features"></a>
 
 - To Do List
-- Grey colour Scheme
+- Add and Remove Features
 - Check Box on each list item
 
 
@@ -75,7 +75,6 @@ To get a local copy up and running, follow these steps.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Add and Remove Features
 - Interactive Features
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -86,7 +85,7 @@ To get a local copy up and running, follow these steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/sunga12/ES6-Awesome-Books/issues).
+Feel free to check the [issues page](https://github.com/sunga12/Todo-List/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
