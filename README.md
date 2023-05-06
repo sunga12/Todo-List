@@ -52,9 +52,12 @@ TO-DO List is a basic website that allows users to add/remove books from a list
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
-1. Download the zip file or clone with this command `git clone https://github.com/sunga12/Todo-List.git`(Make sure you have `Git installed` in your Computer or Install it by following [these steps](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git))
-2. `Todo-List`
-3. Open it with the live server
+1. Download the zip file or clone with this command `git clone https://github.com/sunga12/Todo-List.git`(Make sure you have Git installed in your Computer or Install it by following [these steps](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git))
+2. In the terminal, if you do not have webpack Installed, run the following
+`npm init -y`
+`npm install webpack webpack-cli --save-dev`
+
+3. Then build the project using `npm run build` & open in the browser using `npm start`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
