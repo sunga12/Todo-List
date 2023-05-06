@@ -46,7 +46,7 @@ TO-DO List is a basic website that allows users to add/remove books from a list
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Coming Soon]
+- [To-Do List](https://sunga12.github.io/Todo-List/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
