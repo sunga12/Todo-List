@@ -1,7 +1,7 @@
 import Task from './task.js';
 import menu from './assets/images/menu.svg';
 
-export default class Tasks {
+module.exports = class Tasks {
   constructor(tasks = []) {
     this.tasks = tasks;
   }
