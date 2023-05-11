@@ -1,7 +1,7 @@
 import Task from './task.js';
 import menu from './assets/images/menu.svg';
 
-export default class Tasks {
+class Tasks {
   constructor(tasks = []) {
     this.tasks = tasks;
   }
@@ -116,3 +116,5 @@ export default class Tasks {
     this.saveTasks();
   }
 }
+
+module.exports = Tasks;
