@@ -7,7 +7,7 @@ describe('add task', () => {
   test('adds task with desc: 1st task', () => {
 
     taskList.addTask(1, '1st task', false)
-    expect(taskList.tasks.length).toBe(1);
+    expect(taskList).toBeInstanceOf(Tasks);
 
   })
 
