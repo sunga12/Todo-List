@@ -34,4 +34,9 @@ describe("remove task", () => {
     taskList.removeTask(0, 1);
     expect(taskList.tasks.length).toBe(1);
   });
+
+  test("checks the length of the array", () => {
+    taskList.removeTask(0, 1);
+    expect(taskList.tasks).toStrictEqual([]);
+  });
 });
