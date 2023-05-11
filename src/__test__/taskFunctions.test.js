@@ -29,4 +29,9 @@ describe("remove task", () => {
     taskList.removeTask(0, 1);
     expect(taskList.tasks[1].description).toMatch(/3rd task/);
   });
+
+  test("checks the length of the array", () => {
+    taskList.removeTask(0, 1);
+    expect(taskList.tasks.length).toBe(1);
+  });
 });
