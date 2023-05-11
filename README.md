@@ -1,5 +1,5 @@
-
 <a name="readme-top"></a>
+
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -24,6 +24,7 @@
 TO-DO List is a basic website that allows users to add/remove books from a list
 
 ## 🛠 Built With <a name="built-with"></a>
+
 - HTML
 - CSS
 - JavaScript
@@ -38,7 +39,6 @@ TO-DO List is a basic website that allows users to add/remove books from a list
 - Edit Task
 - Check Boxes
 - Saves List in Local Storage
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -55,10 +55,11 @@ TO-DO List is a basic website that allows users to add/remove books from a list
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
+
 1. Download the zip file or clone with this command `git clone https://github.com/sunga12/Todo-List.git`(Make sure you have Git installed in your Computer or Install it by following [these steps](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git))
 2. In the terminal, if you do not have webpack Installed, run the following
-`npm init -y`
-`npm install webpack webpack-cli --save-dev`
+   `npm init -y`
+   `npm install webpack webpack-cli --save-dev`
 
 3. Then build the project using `npm run build` & open in the browser using `npm start`
 
@@ -74,6 +75,10 @@ To get a local copy up and running, follow these steps.
 - Twitter: [@OfficialAseT](https://twitter.com/OfficialAseT)
 - LinkedIn: [Sungabanja Thawethe](https://www.linkedin.com/in/sungabanja-thawethe-b3419b142/)
 
+👤 **Vangelis Fotiadis**
+
+- GitHub: [@vangelif](https://github.com/vangelif)
+- Twitter: [@vangfot](https://twitter.com/vangfot)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -109,11 +114,9 @@ Give a ⭐️ if you like this project!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-
 I would like to thank Microverse for the opportunity to become a software developer
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- LICENSE -->
 
@@ -122,4 +125,3 @@ I would like to thank Microverse for the opportunity to become a software develo
 This project is [MIT](./LICENSE.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
