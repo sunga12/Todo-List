@@ -52,15 +52,18 @@ describe("editTask", () => {
     const updatedTasks = tasks.editTask(newDescription, index);
     expect(updatedTasks).toEqual([{ description: "Task 1" }]);
   });
-  // test('should update the task description at the given index', () => {
-  //   const tasks = [{ description: 'Task 1' }, { description: 'Task 2' }];
-  //   const newDescription = 'Updated Task';
-  //   const index = 1;
-  //   const updatedTasks = editTask(tasks, newDescription, index);
-  //   expect(updatedTasks).toEqual([
-  //     { description: 'Task 1' },
-  //     { description: 'Updated Task' },
-  //   ]);
-  // });
+  test("should update the task description at the given index", () => {
+    const tasks = new Tasks([
+      { description: "Task 1" },
+      { description: "Task 2" },
+    ]);
+    const newDescription = "Updated Task";
+    const index = 1;
+    const updatedTasks = tasks.editTask(newDescription, index);
+    expect(updatedTasks).toEqual([
+      { description: "Task 1" },
+      { description: "Updated Task" },
+    ]);
+  });
 });
 
