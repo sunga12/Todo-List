@@ -1,4 +1,4 @@
-import Task from '../task.js';
+import Task from "../task.js";
 
 export default class Tasks {
   constructor(tasks = []) {
@@ -17,20 +17,17 @@ export default class Tasks {
   }
 
   editTask(newDescription, index) {
-    if(this.tasks.length !== 0){
+    if (this.tasks.length !== 0 && index >= 0 && index <= this.tasks.length) {
+      const updatedTasks = [...this.tasks];
+      updatedTasks[index] = {
+        ...updatedTasks[index],
+        description: newDescription,
+      };
+      return updatedTasks;
 
-    this.tasks[index].description = task(newDescription) ;
-    return this.tasks;
+      // return this.tasks;
     }
-    // this.saveTasks();
+    return this.tasks;
   }
-
-  // editTask(newDescription, index) {
-  //   const editedArray = this.tasks.map( (task) => {
-  //     if(task.index === index) {
-  //       retur
-  //     }
-
-  //   })
-  // }
 }
+
