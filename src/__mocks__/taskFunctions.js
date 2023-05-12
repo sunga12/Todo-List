@@ -1,4 +1,4 @@
-import Task from "../task.js";
+import Task from '../task.js';
 
 export default class Tasks {
   constructor(tasks = []) {
@@ -30,4 +30,3 @@ export default class Tasks {
     return this.tasks;
   }
 }
-
