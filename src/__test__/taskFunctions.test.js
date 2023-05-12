@@ -82,5 +82,32 @@ describe('Change Status', () => {
     expect(updatedTasks[1].completed).toBe(true);
   });
 
-  
+  test('changeStatus should not mutate the original tasks array', () => {
+    const tasks = [
+      { completed: false },
+      { completed: false },
+      { completed: false }
+    ];
+    const instance = new Tasks(tasks);
+    const updatedTasks = instance.changeStatus(2, true);
+    expect(updatedTasks).not.toBe(instance.tasks);
+  });
+
+  test('changeStatus should return a new array with the updated task status', () => {
+    const tasks = [
+      { completed: false },
+      { completed: false },
+      { completed: false }
+    ];
+    const instance = new Tasks(tasks);
+    const updatedTasks = instance.changeStatus(2, true);
+    
+    expect(updatedTasks).toEqual([
+      { completed: false },
+      { completed: false },
+      { completed: true }
+    ]);
+      expect(instance.tasks).toEqual(tasks);
+  });
+
 })

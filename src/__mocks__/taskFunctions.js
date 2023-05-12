@@ -24,8 +24,6 @@ export default class Tasks {
         description: newDescription,
       };
       return updatedTasks;
-
-      // return this.tasks;
     }
     return this.tasks;
   }
