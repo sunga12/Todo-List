@@ -42,12 +42,12 @@ export default class Tasks {
     return updatedTasks;
   }
 
-  saveTasks(tasks) {
+  static saveTasks(tasks) {
     const serializedTasks = JSON.stringify(tasks);
     return serializedTasks;
   }
-  
-  retrieveTasks() {
+
+  static retrieveTasks() {
     const savedTasks = localStorage.getItem('tasks');
     if (savedTasks) {
       return JSON.parse(savedTasks);

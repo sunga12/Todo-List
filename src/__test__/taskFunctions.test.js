@@ -147,17 +147,12 @@ describe('Clear Completed ', () => {
 });
 
 describe('local Storage', () => {
-
   test('saveTasks should return serialized tasks', () => {
     const tasks = [
       { completed: false, description: 'Task 1' },
-      { completed: true, description: 'Task 2' }
+      { completed: true, description: 'Task 2' },
     ];
-    const todoList = new Tasks();
-    const serializedTasks = todoList.saveTasks(tasks);
+    const serializedTasks = Tasks.saveTasks(tasks);
     expect(serializedTasks).toEqual(JSON.stringify(tasks));
   });
-
 });
-
-
