@@ -1,4 +1,3 @@
-// import { describe } from 'yargs';
 import Tasks from '../__mocks__/taskFunctions.js';
 
 const taskList = new Tasks([]);
@@ -69,45 +68,80 @@ describe('editTask', () => {
   });
 });
 
-
 describe('Change Status', () => {
-  test('changeStatus should update the task status correctly', () => {
+  test('should update the task status correctly', () => {
     const tasks = [
       { completed: false },
       { completed: false },
-      { completed: false }
+      { completed: false },
     ];
-    const instance = new Tasks(tasks);
-    const updatedTasks = instance.changeStatus(1, true);
+    const todoList = new Tasks(tasks);
+    const updatedTasks = todoList.changeStatus(1, true);
     expect(updatedTasks[1].completed).toBe(true);
   });
 
-  test('changeStatus should not mutate the original tasks array', () => {
+  test('should not mutate the original tasks array', () => {
     const tasks = [
       { completed: false },
       { completed: false },
-      { completed: false }
+      { completed: false },
     ];
-    const instance = new Tasks(tasks);
-    const updatedTasks = instance.changeStatus(2, true);
-    expect(updatedTasks).not.toBe(instance.tasks);
+    const todoList = new Tasks(tasks);
+    const updatedTasks = todoList.changeStatus(2, true);
+    expect(updatedTasks).not.toBe(todoList.tasks);
   });
 
-  test('changeStatus should return a new array with the updated task status', () => {
+  test('should return a new array with the updated task status', () => {
     const tasks = [
       { completed: false },
       { completed: false },
-      { completed: false }
+      { completed: false },
     ];
-    const instance = new Tasks(tasks);
-    const updatedTasks = instance.changeStatus(2, true);
-    
+    const todoList = new Tasks(tasks);
+    const updatedTasks = todoList.changeStatus(2, true);
+
     expect(updatedTasks).toEqual([
       { completed: false },
       { completed: false },
-      { completed: true }
+      { completed: true },
     ]);
-      expect(instance.tasks).toEqual(tasks);
+    expect(todoList.tasks).toEqual(tasks);
+  });
+});
+
+describe('Clear Completed ', () => {
+  test('should remove completed tasks', () => {
+    const tasks = [
+      { completed: true },
+      { completed: false },
+      { completed: true },
+      { completed: false },
+    ];
+    const todoList = new Tasks(tasks);
+    const updatedTasks = todoList.clearCompleted();
+    expect(updatedTasks).toEqual([
+      { completed: false },
+      { completed: false },
+    ]);
   });
 
-})
+  test('should not mutate the original tasks array', () => {
+    const tasks = [
+      { completed: true },
+      { completed: false },
+      { completed: true },
+      { completed: false },
+    ];
+    const todoList = new Tasks(tasks);
+    const updatedTasks = todoList.clearCompleted();
+    expect(updatedTasks).not.toBe(todoList.tasks);
+  });
+
+  test('should handle an empty tasks array', () => {
+    const tasks = [];
+    const todoList = new Tasks(tasks);
+    const updatedTasks = todoList.clearCompleted();
+
+    expect(updatedTasks).toEqual([]);
+  });
+});

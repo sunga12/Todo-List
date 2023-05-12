@@ -32,9 +32,13 @@ export default class Tasks {
     const updatedTasks = [...this.tasks];
     updatedTasks[index] = {
       ...updatedTasks[index],
-      completed: value
+      completed: value,
     };
     return updatedTasks;
   }
 
+  clearCompleted() {
+    const updatedTasks = this.tasks.filter((task) => !task.completed);
+    return updatedTasks;
+  }
 }
