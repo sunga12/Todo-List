@@ -1,6 +1,16 @@
+// import { describe } from 'yargs';
 import Tasks from '../__mocks__/taskFunctions.js';
+// import { test } from 'node:test';
 
 const taskList = new Tasks([]);
+
+// const editTestArray = new Tasks([{index: 4, description: '4th task', completed: false}, {index: 5, description: '5th task', completed: false}, {index: 6, description: '6th task', completed: false} ])
+
+// const editTestArray = [
+//   { index: 4, description: '4th task', completed: false },
+//   { index: 5, description: '5th task', completed: false },
+//   { index: 6, description: '6th task', completed: false },
+// ];
 
 describe('add task', () => {
   test('adds task with desc: 1st task', () => {
@@ -35,3 +45,22 @@ describe('remove task', () => {
     expect(taskList.tasks).toStrictEqual([]);
   });
 });
+
+const lastArray = new Tasks([
+  { index: 4, description: '4th task', completed: false },
+  { index: 5, description: '5th task', completed: false },
+  { index: 6, description: '6th task', completed: false },
+]);
+
+const newArray = new Tasks ([
+  { index: 4, description: '7th task', completed: true },
+  { index: 5, description: '5th task', completed: false },
+  { index: 6, description: '6th task', completed: false },
+]);
+
+describe('edit task', () => {
+  test('edit the task description to be ', () => {
+    lastArray.editTask('1st edited task', 4)
+    expect(lastArray[0]).toBe(newArray[0]);
+  })
+})
