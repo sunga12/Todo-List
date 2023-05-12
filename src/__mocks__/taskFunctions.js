@@ -41,4 +41,17 @@ export default class Tasks {
     const updatedTasks = this.tasks.filter((task) => !task.completed);
     return updatedTasks;
   }
+
+  saveTasks(tasks) {
+    const serializedTasks = JSON.stringify(tasks);
+    return serializedTasks;
+  }
+  
+  retrieveTasks() {
+    const savedTasks = localStorage.getItem('tasks');
+    if (savedTasks) {
+      return JSON.parse(savedTasks);
+    }
+    return []; // Return an empty array if no saved tasks are found
+  }
 }
