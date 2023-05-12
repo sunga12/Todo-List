@@ -4,6 +4,7 @@
   "description": "<a name=\"readme-top\"></a>",
   "private": true,
   "scripts": {
+    "test": "jest",
     "deploy": "gh-pages -d dist",
     "start": "webpack serve --open",
     "build": "webpack"
@@ -42,6 +43,5 @@
     "gh": "^2.8.9",
     "lodash": "^4.17.21",
     "pages": "^0.0.16"
-  },
-  "main": "webpack.config.js"
+  }
 }
