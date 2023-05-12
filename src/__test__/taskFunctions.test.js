@@ -1,3 +1,4 @@
+// import { describe } from 'yargs';
 import Tasks from '../__mocks__/taskFunctions.js';
 
 const taskList = new Tasks([]);
@@ -52,6 +53,7 @@ describe('editTask', () => {
     const updatedTasks = tasks.editTask(newDescription, index);
     expect(updatedTasks).toEqual([{ description: 'Task 1' }]);
   });
+
   test('should update the task description at the given index', () => {
     const tasks = new Tasks([
       { description: 'Task 1' },
@@ -66,3 +68,19 @@ describe('editTask', () => {
     ]);
   });
 });
+
+
+describe('Change Status', () => {
+  test('changeStatus should update the task status correctly', () => {
+    const tasks = [
+      { completed: false },
+      { completed: false },
+      { completed: false }
+    ];
+    const instance = new Tasks(tasks);
+    const updatedTasks = instance.changeStatus(1, true);
+    expect(updatedTasks[1].completed).toBe(true);
+  });
+
+  
+})

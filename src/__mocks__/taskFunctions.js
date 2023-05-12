@@ -29,4 +29,14 @@ export default class Tasks {
     }
     return this.tasks;
   }
+
+  changeStatus(index, value) {
+    const updatedTasks = [...this.tasks];
+    updatedTasks[index] = {
+      ...updatedTasks[index],
+      completed: value
+    };
+    return updatedTasks;
+  }
+
 }
